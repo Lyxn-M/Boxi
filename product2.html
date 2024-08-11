@@ -3,39 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boxi - Our Products</title>
-    <meta name="description" content="Discover Boxi's wide range of high-quality wood products.">
+    <title>Boxi</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="images/logo2.png">
 </head>
 <body>
     <header>
         <img src="images/logo.png" alt="Boxi Logo" class="logo">
         <nav>
             <ul>
-                <li><a href="index.html" id="home-link">Home</a></li>
-                <li><a href="products.html" id="products-link">Products</a></li>
-                <li><a href="contact.html" id="contact-link">Contact</a></li>
-                <li><a href="#" class="lang-switch" id="lang-switch"><i class="fas fa-language"></i> العربية</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <label class="switch">
-            <input type="checkbox" id="toggle-dark-mode">
-            <span class="slider round"></span>
-        </label>
     </header>
     <main>
-        <section id="products" class="fade-in">
-            <h2 id="products-heading">Our Products</h2>
-            <div class="product-grid">
-                <a href="product1.html" class="product"><img src="images/wooden_mobile_stand.jpg" alt="Wooden Mobile Stand"></a>
-                <a href="product2.html" class="product"><img src="images/product2.jpg" alt="Product 2"></a>
-                <a href="product3.html" class="product"><img src="images/product3.jpg" alt="Product 3"></a>
-                <a href="product4.html" class="product"><img src="images/product4.jpg" alt="Product 4"></a>
-                <a href="product5.html" class="product"><img src="images/product5.jpg" alt="Product 5"></a>
-                <a href="product6.html" class="product"><img src="images/product6.jpg" alt="Product 6"></a>
-            </div>
-        </section>
+        <div class="fade-in">
+            <h1>Product 2</h1>
+            <section class="product-details">
+                <img src="images/product2.jpg" alt="Product 1">
+                <p>idk</p>
+                <ul>
+                    <li>Material: Wood</li>
+                    <li>Size: 10cm x 10cm</li>
+                    <li>Weight: 100g</li>
+                </ul>
+                <button onclick="contactTeam('Product 1')">Contact Us</button>
+            </section>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Boxi. All rights reserved.</p>
