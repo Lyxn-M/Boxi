@@ -2,10 +2,23 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+   
     background-color: #0c0c12;
     color: #7c7a7a;
     transition: background-color 0.3s, color 0.3s;
 }
+.product-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the text color */
+    display: block; /* Make the link behave like a block element */
+}
+
+.product-link:hover .product {
+    /* Add hover effects here if needed */
+    background-color: #000000;
+    cursor: pointer;
+}
+
 
 header {
     display: flex;
@@ -70,9 +83,12 @@ main {
 }
 
 h1 {
+    font-family:  Poppins;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #c91a1a;
+    background: linear-gradient(to left, #f61b1b,#c91a1a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .product-grid {
@@ -126,6 +142,46 @@ h1 {
     transform: scale(1.05);
 }
 
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.product-details img {
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-details h2 {
+    margin-top: 0;
+}
+
+.product-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-details li {
+    margin-bottom: 10px;
+}
+
+.product-details button {
+    background-color: #ffd700;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s
+}
+.product-details button:hover {
+    background-color: #ffc400;
+}
 footer {
     background-color: #000000;
     color: #ffffff;
