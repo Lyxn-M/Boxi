@@ -2,19 +2,62 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-   
+   background-image: url(images/stacked-steps-haikei.png);
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
     background-color: #0c0c12;
     color: #7c7a7a;
     transition: background-color 0.3s, color 0.3s;
 }
+
+body.toggle {
+    background-image: url('images/stacked-steps-haikei3.png');
+  }
+  .counter-container {
+    text-align: center;
+    margin: 40px auto;
+    width: 300px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  #progress {
+    height: 100%;
+    background-image: linear-gradient(to right, #ff0000, #ff3333, #ff6666);
+    transition: width 0.5s ease-in-out;
+  }
+  
+  #counter {
+    font-size: 24px;
+    color: #ff0000;
+    font-weight: bold;
+  }
+  
+  #goal {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+  }
 .product-link {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit the text color */
-    display: block; /* Make the link behave like a block element */
+    text-decoration: none; 
+    color: inherit;  
+    display: block; 
 }
 
 .product-link:hover .product {
-    /* Add hover effects here if needed */
+    
     background-color: #000000;
     cursor: pointer;
 }
@@ -90,6 +133,14 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+h2{
+    font-family:  Poppins;
+    
+    background: linear-gradient(to left, #f61b1b,#c91a1a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+
 
 .product-grid {
     display: flex;
@@ -100,6 +151,7 @@ h1 {
 
 .product {
     width: 300px;
+    height: 500px;
     border: 1px solid #c91a1a;
     border-radius: 8px;
     overflow: hidden;
@@ -109,10 +161,14 @@ h1 {
     text-align: center;
     padding: 10px;
 }
+.product.toggle{
+    background-color: #f0f0f0;
+  }
 
 .product img {
     width: 100%;
-    height: auto;
+    height: 300px;
+    
 }
 
 .product h3 {
@@ -141,6 +197,59 @@ h1 {
 .product:hover {
     transform: scale(1.05);
 }
+.cool-button {
+  /* Oblong shape */
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  
+  /* Gradient background */
+  background-image: linear-gradient(to bottom, #830000, #f40000);
+  background-color: #4CAF50;
+  
+  /* Shadow */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  
+  /* Text styles */
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  
+  /* Hover effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cool-button:hover {
+  /* Scale up and change shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.3);
+  
+  /* Change gradient colors on hover */
+  background-image: linear-gradient(to bottom, #f40000, #830000);
+}
+
+.cool-button:active {
+  /* Push down effect on click */
+  transform: scale(0.95);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.contact-inputs{
+    border-radius: 20px;
+  padding: 10px 20px;
+  
+  /* Add some padding and margin */
+  margin-bottom: 20px;
+  padding: 10px;
+  
+  /* Add a subtle border */
+  border: 1px solid #ccc;
+  
+  /* Add some font styles */
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
 
 .product-details {
     display: flex;
@@ -154,6 +263,11 @@ h1 {
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.product-details img:hover{
+    transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .product-details h2 {
