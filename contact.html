@@ -24,7 +24,7 @@
             <div class="contact-container">
             <h1>Contact Us</h1>
             <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="837e5744-83ca-4b6c-9b23-3adc02e2bcea">
+              <input type="hidden" name="access_key" value="77c247ad-a6c5-4db9-990d-d723fcf396fc">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Your name" class="contact-inputs" required>
                 
@@ -32,8 +32,8 @@
                 <input type="email" id="email" name="email" placeholder="example@example.com" class="contact-inputs" required>
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4" class="contact-inputs" required></textarea>
-                
-                <button type="submit">Send Message</button>
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                <button type="submit" class="cool-button">Send</button>
             </form>
             <iframe name="hidden-iframe" style="display:none;"></iframe>
         </div>
