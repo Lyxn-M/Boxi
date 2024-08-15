@@ -23,6 +23,14 @@ body.toggle {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c91a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    background: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
   }
   
   .progress-bar {
