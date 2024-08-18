@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="icon" type="image/png" href="images/logo2.png">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Boxi Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="arabic.html">الرئيسيه</a></li>
+                <li><a href="productsa.html">المنتجات</a></li>
+                <li><a href="contacta.html">تواصل معنا</a></li>
+                <li><a href="index.html">English</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="fade-in">
+            <div class="contact-container">
+            <h1>تواصل معنا</h1>
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="77c247ad-a6c5-4db9-990d-d723fcf396fc">
+                <label for="name">:اسمك</label>
+                <input type="text" id="name" name="name" placeholder="اسمك" class="contact-inputs" required>
+                
+                <label for="email">:حسابك</label>
+                <input type="email" id="email" name="email" placeholder="حسابك" class="contact-inputs" required>
+                <label for="message">:رسالتك</label>
+                <textarea id="message" name="message" rows="4" class="contact-inputs" required></textarea>
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                <button type="submit" class="cool-button">ارسل</button>
+            </form>
+            <iframe name="hidden-iframe" style="display:none;"></iframe>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Boxi. All rights reserved.</p>
+    </footer>
+    <script>
+        $(document).ready(function() {
+          $('#contact-form').submit(function(event) {
+            event.preventDefault();
+            var formData = $(this).serialize();
+            $.ajax({
+              type: 'POST',
+              url: 'contact.php',
+              data: formData,
+              success: function(data) {
+                alert('Form submitted successfully!');
+              }
+            });
+          });
+        });
+      </script>
+</body>
+</html>
