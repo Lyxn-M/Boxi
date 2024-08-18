@@ -1,7 +1,16 @@
-function contactTeam(productName) {
-    alert(`Thank you for your interest in ${productName}. Please contact our team at the following numbers: +20 106 351 5106 +20 102 966 5151 +20 109 356 5359`);
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = "block";
 }
 
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target.classList.contains('modal')) {
+      event.target.style.display = "none";
+  }
+}
 let counter = 400; 
 const goal = 500; 
 const progressBar = document.getElementById('progress');
