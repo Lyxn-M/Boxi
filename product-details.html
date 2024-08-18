@@ -14,13 +14,14 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>             
+                <li><a href="arabic.html">العربيه</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="fade-in">
-            <h1>Phone holder</h1>
+            <h1>Phone stand</h1>
             <section class="product-details">
                 <img src="images/product1.jpg" alt="Product 1">                
                 <p>A mobile stand you can choose any design to be on it.</p>
@@ -29,9 +30,15 @@
                     <li>Size: 10cm x 10cm</li>
                     <li>Weight: 100g</li>
                 </ul>
-                <button onclick="contactTeam('Product 1')"class="cool-button">Buy now!</button>
+                <button onclick="openModal('progressModal')" class="cool-button">Buy now!</button>
             </section>
         </div>
+        <div id="progressModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('progressModal')">&times;</span>
+                <h2>Thank you for your interest in</h2>
+                <p>Please contact our team at the following numbers: +20 106 351 5106 +20 102 966 5151 +20 109 356 5359`</p>
+            </div>
     </main>
     <footer>
         <p>&copy; 2024 Boxi. All rights reserved.</p>
