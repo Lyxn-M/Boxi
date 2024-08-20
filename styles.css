@@ -73,34 +73,76 @@ body.toggle {
     background-color: #000000;
     cursor: pointer;
 }
-
+.Ar {
+    /* Oblong shape */
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    
+    /* Gradient background */
+    background-image: linear-gradient(to bottom, #830000, #f40000);
+    background-color: #4CAF50;
+    
+    /* Shadow */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    
+    /* Text styles */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    /* Hover effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .Ar:hover {
+    /* Scale up and change shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.3);
+    
+    /* Change gradient colors on hover */
+    background-image: linear-gradient(to bottom, #f40000, #830000);
+  }
+  
+  .Ar:active {
+    /* Push down effect on click */
+    transform: scale(0.95);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
 
 header {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     padding: 10px 20px;
     background-image: url('images/image.png');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     color: #000000;
-    position: relative;
+    position:23424;
 }
 
 header .logo {
     width: 120px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 nav {
     z-index: 2;
 }
 
+nav ul hi{
+    text-decoration: none
+}
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: right;
+    align-items: right;
     padding: 0;
     margin: 0;
 }
@@ -417,3 +459,13 @@ form button:hover {
 .fade-in {
     animation: fadeIn 2s ease-in-out;
 }
+.reveal {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
